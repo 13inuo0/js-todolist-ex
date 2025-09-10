@@ -31,9 +31,10 @@ window.addEventListener("DOMContentLoaded", function () {
     // 입력한 포커스
     addValue.focus();
     // 삭제하기
-    const delBtn = document.querySelector(".del-btn");
+    const delBtn = list.querySelector(".del-btn");
     delBtn.addEventListener("click", function () {
       // console.log(e.target.parentElement);
+      e.stopPropagation();
       list.remove();
     });
     // li 클릭시 완료 기능
@@ -59,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (result.children.length === 0) {
       alert("삭제할 목록이 없습니다.");
     } else {
-      result.innerHTML;
+      result.innerHTML = "";
     }
   });
 });
