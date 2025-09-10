@@ -25,10 +25,34 @@ window.addEventListener("DOMContentLoaded", function () {
     const list = document.createElement("li");
     console.log(list);
     list.innerHTML = `${todoValue} <button class="del-btn">X</button>`;
-    result.appendChild(list);
+    result.append(list);
     // 입력된 내용 빈 문자열로 만들기
     addValue.value = "";
     // 입력한 포커스
     addValue.focus();
+    // 삭제하기
+    const delBtn = document.querySelector(".del-btn");
+    delBtn.addEventListener("click", function () {
+      // console.log(e.target.parentElement);
+      list.remove();
+    });
+    // li 클릭시 완료 기능
+    list.addEventListener("click", function () {
+      //   list.classList.toggle("completed");
+      if (list.classList.contains("completed")) {
+        list.remove();
+      } else {
+        list.classList.add("completed");
+      }
+    });
+  });
+  //   전체삭제
+  allclear.addEventListener("click", function () {
+    // result.innerHTML = ""
+    if (result.innerHTML === "") {
+      alert("삭제할  목록이 없습니다.");
+    } else {
+      result.innerHTML === "";
+    }
   });
 });

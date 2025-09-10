@@ -60,3 +60,25 @@ header {
 #allClear:hover {
   background-color: #c82333;
 }
+.todoList li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.del-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+.completed {
+  text-decoration: line-through;
+  color: #1c7631;
+}
