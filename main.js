@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const inputField = this.document.querySelector(".inputField");
   const addValue = this.document.querySelector("#addValue");
   const result = this.document.querySelector("#result");
-  const allclear = this.document.querySelector("#allClear");
+  const allClear = this.document.querySelector("#allClear");
   inputField.addEventListener("submit", function (e) {
     e.preventDefault();
     const todoValue = addValue.value.trim();
@@ -47,12 +47,19 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
   //   전체삭제
-  allclear.addEventListener("click", function () {
+  allClear.addEventListener("click", function () {
     // result.innerHTML = ""
-    if (result.innerHTML === "") {
-      alert("삭제할  목록이 없습니다.");
+    // 정확하게 빈 상태인지를 판단할 수 없음 result.innerHTML === ""
+    // if (result.innerHTML === "") {
+    //   alert("삭제할  목록이 없습니다.");
+    // } else {
+    //   result.innerHTML === "";
+    // }
+    // 자식 요소 존재 여부로 확인
+    if (result.children.length === 0) {
+      alert("삭제할 목록이 없습니다.");
     } else {
-      result.innerHTML === "";
+      result.innerHTML;
     }
   });
 });
