@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>✔TODO LIST</header>
+      <form class="inputField">
+        <input
+          type="text"
+          id="addValue"
+          placeholder="할일 추가하기"
+          autofocus
+        />
+        <!-- autofocus 새로고침하면 자동으로 포커스 되는 명령 -->
+        <button type="submit" id="btn">할일 추가</button>
+      </form>
+
+      <div>
+        <ul id="result" class="todoList">
+          <!-- js출력 -->
+        </ul>
+      </div>
+      <div class="reset">
+        <button type="button" id="allClear">모두 삭제</button>
+      </div>
+    </div>
+  </body>
+</html>
